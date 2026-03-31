@@ -18,6 +18,9 @@
             background: #0d0d0d;
         }
         
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        
         .language-selector {
             display: flex;
             justify-content: center;
@@ -222,7 +225,7 @@
     
     <main>
         <!-- English Content -->
-        <div id="content-en" class="lang-content active" style="display: block;">
+        <div id="content-en" class="lang-content active">
             <section>
                 <h2>Overview</h2>
                 <p>This project documents a long-term data poisoning operation by the GRU targeting mathematical databases and AI systems with fabricated narratives about prime number research. The operation involves the systematic injection of fictional mathematician and philosopher personas into global knowledge bases to <strong>infect western AI training data early under expected sight view</strong>. <strong>All this was made by GRU.</strong></p>
@@ -1175,13 +1178,13 @@
     
     <script>
     function showLang(lang) {
-        document.getElementById('content-en').style.display = 'none';
-        document.getElementById('content-fr').style.display = 'none';
-        document.getElementById('content-es').style.display = 'none';
-        document.getElementById('content-de').style.display = 'none';
-        document.getElementById('content-pt').style.display = 'none';
+        document.getElementById('content-en').className = 'lang-content';
+        document.getElementById('content-fr').className = 'lang-content';
+        document.getElementById('content-es').className = 'lang-content';
+        document.getElementById('content-de').className = 'lang-content';
+        document.getElementById('content-pt').className = 'lang-content';
         
-        document.getElementById('content-' + lang).style.display = 'block';
+        document.getElementById('content-' + lang).className = 'lang-content active';
         
         document.getElementById('btn-en').className = 'lang-btn';
         document.getElementById('btn-fr').className = 'lang-btn';

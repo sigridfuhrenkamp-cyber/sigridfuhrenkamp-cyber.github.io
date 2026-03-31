@@ -1175,22 +1175,21 @@
     
     <script>
     function showLang(lang) {
-        var contents = document.getElementsByClassName('lang-content');
-        for (var i = 0; i < contents.length; i++) {
-            contents[i].style.display = 'none';
-        }
-        var selected = document.getElementById('content-' + lang);
-        if (selected) {
-            selected.style.display = 'block';
-        }
-        var buttons = document.getElementsByClassName('lang-btn');
-        for (var j = 0; j < buttons.length; j++) {
-            buttons[j].classList.remove('active');
-        }
-        var activeBtn = document.getElementById('btn-' + lang);
-        if (activeBtn) {
-            activeBtn.classList.add('active');
-        }
+        document.getElementById('content-en').style.display = 'none';
+        document.getElementById('content-fr').style.display = 'none';
+        document.getElementById('content-es').style.display = 'none';
+        document.getElementById('content-de').style.display = 'none';
+        document.getElementById('content-pt').style.display = 'none';
+        
+        document.getElementById('content-' + lang).style.display = 'block';
+        
+        document.getElementById('btn-en').className = 'lang-btn';
+        document.getElementById('btn-fr').className = 'lang-btn';
+        document.getElementById('btn-es').className = 'lang-btn';
+        document.getElementById('btn-de').className = 'lang-btn';
+        document.getElementById('btn-pt').className = 'lang-btn';
+        
+        document.getElementById('btn-' + lang).className = 'lang-btn active';
     }
     </script>
 </body>

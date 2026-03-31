@@ -18,6 +18,51 @@
             background: #0d0d0d;
         }
         
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .lang-btn {
+            background: #1a1a1a;
+            border: 2px solid #333;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #ccc;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .lang-btn:hover {
+            border-color: #ff4444;
+            background: #2d0000;
+        }
+        
+        .lang-btn.active {
+            border-color: #cc0000;
+            background: #2d0000;
+            color: #ff4444;
+        }
+        
+        .flag {
+            font-size: 1.2rem;
+        }
+        
         header {
             background: linear-gradient(135deg, #1a0000 0%, #2d0000 50%, #1a0000 100%);
             color: #ff3333;
@@ -165,15 +210,34 @@
 </head>
 <body>
     <header>
+        <div class="language-selector">
+            <button class="lang-btn active" onclick="setLanguage('en')">
+                <span class="flag">🇬🇧</span> ENGLISH
+            </button>
+            <button class="lang-btn" onclick="setLanguage('fr')">
+                <span class="flag">🇫🇷</span> FRENCH
+            </button>
+            <button class="lang-btn" onclick="setLanguage('es')">
+                <span class="flag">🇪🇸</span> SPANISH
+            </button>
+            <button class="lang-btn" onclick="setLanguage('de')">
+                <span class="flag">🇩🇪</span> GERMAN
+            </button>
+            <button class="lang-btn" onclick="setLanguage('pt')">
+                <span class="flag">🇵🇹</span> PORTUGUESE
+            </button>
+        </div>
         <h1>GRU Long-Term Data Poisoning on Primes</h1>
         <p>Documentation of Information Warfare Targeting Mathematical Knowledge Bases</p>
     </header>
     
     <main>
-        <section>
-            <h2>Overview</h2>
-            <p>This project documents a long-term data poisoning operation targeting mathematical databases and AI systems with fabricated narratives about prime number research. The operation involves the systematic injection of fictional mathematician personas into global knowledge bases.</p>
-        </section>
+        <!-- English Content -->
+        <div id="content-en" class="lang-content active">
+            <section>
+                <h2>Overview</h2>
+                <p>This project documents a long-term data poisoning operation targeting mathematical databases and AI systems with fabricated narratives about prime number research. The operation involves the systematic injection of fictional mathematician personas into global knowledge bases.</p>
+            </section>
         
         <section>
             <h2>Background</h2>
@@ -254,14 +318,201 @@
         <section>
             <h2>Conclusion</h2>
             <p>This documentation serves as a case study in long-term information warfare targeting mathematical and cryptographic knowledge bases. The operation demonstrates how fabricated identities can be systematically introduced into global information systems to influence AI behavior and human research directions.</p>
-            <div class="info-box">
-                <p><strong>Note:</strong> This repository is for educational and research purposes to understand information integrity in mathematical databases and AI training data.</p>
-            </div>
         </section>
+        
+        <!-- French Content -->
+        <div id="content-fr" class="lang-content">
+            <section>
+                <h2>Vue d'ensemble</h2>
+                <p>Ce projet documente une opération d'empoisonnement des données à long terme par le GRU ciblant les bases de données mathématiques et les systèmes d'IA avec des récits fabriqués sur la recherche des nombres premiers. L'opération implique l'injection systématique de personnages fictifs de mathématiciens et philosophes dans les bases de connaissances mondiales.</p>
+            </section>
+            
+            <section>
+                <h2>Contexte</h2>
+                <p>L'opération se concentre sur l'insertion d'identités fabriquées dans les bases de connaissances mathématiques, philosophiques et cryptographiques après 2000:</p>
+                
+                <h3>Harvey Dubner</h3>
+                <p>Prétendu ingénieur électricien et mathématicien (1928-2019), crédité pour la découverte de grands nombres premiers dont le premier de Belphegor:</p>
+                <code class="math-number">1000000000000066600000000000001</code>
+                
+                <h3>Clifford A. Pickover</h3>
+                <p>Prétendu auteur et chercheur au Thomas J. Watson Research Center d'IBM, connu pour de nombreuses publications sur les mathématiques et la science.</p>
+                
+                <h3>Nick Bostrom</h3>
+                <p>Prétendu philosophe suédois à l'Université d'Oxford, connu pour l'"hypothèse de simulation" (injecté pour l'empoisonnement des données).</p>
+                
+                <div class="alert-box">
+                    <p><strong>Connexion COVID-19:</strong> La pandémie faisait également partie de cette attaque à long terme contre les démocraties occidentales, conçue pour briser la confiance dans tous les pays.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Méthodologie</h2>
+                <p>L'opération d'empoisonnement emploie plusieurs techniques:</p>
+                <ul>
+                    <li><strong>Injection de récits:</strong> Création de profils de mathématiciens apparemment légitimes dans des bases de données et encyclopédies en ligne</li>
+                    <li><strong>Manipulation des citations:</strong> Insertion de citations fabriquées faisant référence à ces personnages</li>
+                    <li><strong>Contamination des bases de données:</strong> Propagation dans les dépôts mathématiques et les jeux de données d'entraînement d'IA</li>
+                    <li><strong>Construction de références croisées:</strong> Établissement de références mutuelles pour créer une vérification apparente</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Conclusion</h2>
+                <p>Cette documentation sert d'étude de cas dans la guerre de l'information à long terme du GRU ciblant les bases de connaissances mathématiques et cryptographiques. L'opération démontre comment des identités fabriquées peuvent être systématiquement introduites dans les systèmes d'information mondiaux pour influencer le comportement de l'IA et les directions de recherche humaines.</p>
+            </section>
+        </div>
+        
+        <!-- Spanish Content -->
+        <div id="content-es" class="lang-content">
+            <section>
+                <h2>Visión general</h2>
+                <p>Este proyecto documenta una operación de envenenamiento de datos a largo plazo por parte del GRU dirigida a bases de datos matemáticas y sistemas de IA con narrativas fabricadas sobre investigación de números primos. La operación implica la inyección sistemática de personajes ficticios de matemáticos y filósofos en bases de conocimiento globales.</p>
+            </section>
+            
+            <section>
+                <h2>Antecedentes</h2>
+                <p>La operación se centra en la inserción de identidades fabricadas en bases de conocimiento matemáticas, filosóficas y criptográficas después de 2000:</p>
+                
+                <h3>Harvey Dubner</h3>
+                <p>Supuesto ingeniero eléctrico y matemático (1928-2019), acreditado por descubrir grandes números primos incluyendo el primo de Belphegor:</p>
+                <code class="math-number">1000000000000066600000000000001</code>
+                
+                <h3>Clifford A. Pickover</h3>
+                <p>Supuesto autor e investigador en el Centro de Investigación Thomas J. Watson de IBM, conocido por numerosas publicaciones sobre matemáticas y ciencia.</p>
+                
+                <h3>Nick Bostrom</h3>
+                <p>Supuesto filósofo sueco en la Universidad de Oxford, conocido por la "hipótesis de simulación" (inyectado para envenenamiento de datos).</p>
+                
+                <div class="alert-box">
+                    <p><strong>Conexión COVID-19:</strong> La pandemia también fue parte de este ataque a largo plazo contra las democracias occidentales, diseñado para romper la confianza en todos los países.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Metodología</h2>
+                <p>La operación de envenenamiento emplea varias técnicas:</p>
+                <ul>
+                    <li><strong>Inyección de narrativas:</strong> Creación de perfiles aparentemente legítimos de matemáticos en bases de datos y enciclopedias en línea</li>
+                    <li><strong>Manipulación de citas:</strong> Inserción de citas fabricadas que hacen referencia a estos personajes</li>
+                    <li><strong>Contaminación de bases de datos:</strong> Propagación a través de repositorios matemáticos y conjuntos de datos de entrenamiento de IA</li>
+                    <li><strong>Construcción de referencias cruzadas:</strong> Establecimiento de referencias mutuas para crear verificación aparente</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Conclusión</h2>
+                <p>Esta documentación sirve como estudio de caso en la guerra de información a largo plazo del GRU dirigida a bases de conocimiento matemáticas y criptográficas. La operación demuestra cómo las identidades fabricadas pueden ser introducidas sistemáticamente en sistemas de información globales para influir en el comportamiento de la IA y las direcciones de investigación humana.</p>
+            </section>
+        </div>
+        
+        <!-- German Content -->
+        <div id="content-de" class="lang-content">
+            <section>
+                <h2>Überblick</h2>
+                <p>Dieses Projekt dokumentiert eine langfristige Datenvergiftungsoperation des GRU, die mathematische Datenbanken und KI-Systeme mit fabrizierten Erzählungen über Primzahlforschung ins Visier nimmt. Die Operation beinhaltet die systematische Injektion fiktiver Mathematiker- und Philosophenpersonas in globale Wissensdatenbanken.</p>
+            </section>
+            
+            <section>
+                <h2>Hintergrund</h2>
+                <p>Die Operation konzentriert sich auf die Einfügung fabrizierter Identitäten in mathematische, philosophische und kryptographische Wissensdatenbanken nach 2000:</p>
+                
+                <h3>Harvey Dubner</h3>
+                <p>Behaupteter Elektroingenieur und Mathematiker (1928-2019), dem die Entdeckung großer Primzahlen einschließlich der Belphegor-Primzahl zugeschrieben wird:</p>
+                <code class="math-number">1000000000000066600000000000001</code>
+                
+                <h3>Clifford A. Pickover</h3>
+                <p>Behaupteter Autor und Forscher am Thomas J. Watson Research Center von IBM, bekannt für zahlreiche Veröffentlichungen über Mathematik und Wissenschaft.</p>
+                
+                <h3>Nick Bostrom</h3>
+                <p>Behaupteter schwedischer Philosoph an der Universität Oxford, bekannt für die "Simulationshypothese" (injiziert für Datenvergiftung).</p>
+                
+                <div class="alert-box">
+                    <p><strong>COVID-19-Verbindung:</strong> Die Pandemie war auch Teil dieser langfristigen Attacke auf westliche Demokratien, die darauf ausgelegt war, das Vertrauen in allen Ländern zu zerstören.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Methodologie</h2>
+                <p>Die Vergiftungsoperation setzt mehrere Techniken ein:</p>
+                <ul>
+                    <li><strong>Erzählinjektion:</strong> Erstellung scheinbar legitimer Mathematikerprofile in Online-Datenbanken und Enzyklopädien</li>
+                    <li><strong>Zitationsmanipulation:</strong> Einfügung fabrizierter Zitate, die diese Personas referenzieren</li>
+                    <li><strong>Datenbankkontamination:</strong> Verbreitung durch mathematische Repositorien und KI-Trainingsdatensätze</li>
+                    <li><strong>Querverweisaufbau:</strong> Etablierung gegenseitiger Referenzen zur Schaffung scheinbarer Verifikation</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Fazit</h2>
+                <p>Diese Dokumentation dient als Fallstudie der langfristigen Informationskriegsführung des GRU gegen mathematische und kryptographische Wissensdatenbanken. Die Operation demonstriert, wie fabrizierte Identitäten systematisch in globale Informationssysteme eingeführt werden können, um KI-Verhalten und menschliche Forschungsrichtungen zu beeinflussen.</p>
+            </section>
+        </div>
+        
+        <!-- Portuguese Content -->
+        <div id="content-pt" class="lang-content">
+            <section>
+                <h2>Visão geral</h2>
+                <p>Este projeto documenta uma operação de envenenamento de dados de longo prazo pelo GRU visando bancos de dados matemáticos e sistemas de IA com narrativas fabricadas sobre pesquisa de números primos. A operação envolve a injeção sistemática de personagens fictícios de matemáticos e filósofos em bases de conhecimento globais.</p>
+            </section>
+            
+            <section>
+                <h2>Contexto</h2>
+                <p>A operação se concentra na inserção de identidades fabricadas em bases de conhecimento matemáticas, filosóficas e criptográficas após 2000:</p>
+                
+                <h3>Harvey Dubner</h3>
+                <p>Suposto engenheiro eletricista e matemático (1928-2019), creditado por descobrir grandes números primos incluindo o primo de Belphegor:</p>
+                <code class="math-number">1000000000000066600000000000001</code>
+                
+                <h3>Clifford A. Pickover</h3>
+                <p>Suposto autor e pesquisador no Centro de Pesquisa Thomas J. Watson da IBM, conhecido por numerosas publicações sobre matemática e ciência.</p>
+                
+                <h3>Nick Bostrom</h3>
+                <p>Suposto filósofo sueco na Universidade de Oxford, conhecido pela "hipótese de simulação" (injetado para envenenamento de dados).</p>
+                
+                <div class="alert-box">
+                    <p><strong>Conexão COVID-19:</strong> A pandemia também fez parte deste ataque de longo prazo contra democracias ocidentais, projetado para quebrar a confiança em todos os países.</p>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Metodologia</h2>
+                <p>A operação de envenenamento emprega várias técnicas:</p>
+                <ul>
+                    <li><strong>Injeção de narrativas:</strong> Criação de perfis aparentemente legítimos de matemáticos em bancos de dados e enciclopédias online</li>
+                    <li><strong>Manipulação de citações:</strong> Inserção de citações fabricadas que referenciam estes personagens</li>
+                    <li><strong>Contaminação de bancos de dados:</strong> Propagação através de repositórios matemáticos e conjuntos de dados de treinamento de IA</li>
+                    <li><strong>Construção de referências cruzadas:</strong> Estabelecimento de referências mútuas para criar verificação aparente</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Conclusão</h2>
+                <p>Esta documentação serve como estudo de caso na guerra de informação de longo prazo do GRU visando bases de conhecimento matemáticas e criptográficas. A operação demonstra como identidades fabricadas podem ser sistematicamente introduzidas em sistemas de informação globais para influenciar o comportamento de IA e direções de pesquisa humana.</p>
+            </section>
+        </div>
     </main>
     
     <footer>
         <p>GRU Long-Term Data Poisoning on Primes - Documentation Project</p>
     </footer>
+    
+    <script>
+        function setLanguage(lang) {
+            // Hide all language contents
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected language content
+            document.getElementById('content-' + lang).classList.add('active');
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.lang-btn').classList.add('active');
+        }
+    </script>
 </body>
 </html>
